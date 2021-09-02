@@ -16,7 +16,8 @@ void digit_praxis(const int *d) {
     max = 0;
     min = 200;
     do {
-        r = newdig % 10;
+        r = newdig % 10;//ex. if input is 45682, the first digit will be 2
+        //2nd time will be 8 etc.
         if (r > max) {
             max = r;
         }
@@ -25,7 +26,10 @@ void digit_praxis(const int *d) {
         }
         digitcnt++;
         sum += r;
-        newdig = newdig / 10;
+        newdig = newdig / 10;//ex. if input is 45682, the result will be 4568.2
+        //2nd time will be 456.82 etc.
+
+
     } while (newdig != 0);
     printf("sum is = %d\n", sum);
     printf("digits are %d\n", digitcnt);
