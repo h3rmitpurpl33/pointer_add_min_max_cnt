@@ -11,7 +11,7 @@ int main() {
 }
 
 void digit_praxis(const int *d) {
-    int max, min, r, newdig, digitcnt = 0, athr = 0;
+    int max, min, r, newdig, digitcnt = 0, sum = 0;
     newdig = *d;
     max = 0;
     min = 200;
@@ -24,10 +24,10 @@ void digit_praxis(const int *d) {
             min = r;
         }
         digitcnt++;
-        athr += r;
+        sum += r;
         newdig = newdig / 10;
     } while (newdig != 0);
-    printf("athr is = %d\n", athr);
+    printf("sum is = %d\n", sum);
     printf("digits are %d\n", digitcnt);
     printf("max is = %d min is = %d\n", max, min);
 
